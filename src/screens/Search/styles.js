@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         paddingHorizontal: 20,
         color: '#fff',
-        
+
     },
     button: {
         backgroundColor: '#d83b7d',
@@ -28,6 +28,50 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         color: '#fff',
         fontSize: 18
+    },
+    imageArea: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 60,
+        height: 60,
+    },
+    imagem: {
+        width: 50,
+        height: 50,
+        borderRadius: 60,
+    },
+    infoArea: {
+        width: '80%',
+        flexDirection: 'row',
+        marginTop: 10
+    },
+    info: {
+        margin: 5,
+        alignItems: 'center',
+        flexDirection: 'row'
+    },
+    infoText: {
+        color: '#c0c0c0'
+    },
+    userArea: {
+        backgroundColor: '#0d1117',
+        marginTop: 30,
+        padding: 20,
+        borderRadius: 20,
+        borderWidth: 2,
+        borderColor: '#30363d',
+    },
+    userNameArea: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    username: {
+        color: '#e0e0e0',
+        marginLeft: 20,
+        fontSize: 16
+    },
+    bio: {
+        color: '#f0f0f0',
     }
 });
 

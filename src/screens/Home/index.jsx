@@ -8,7 +8,7 @@ export default function Home({ navigation }) {
     const [usuario, setUsuario] = useState({});
 
     useEffect(() => {
-        api.get('Juan-Severiano')
+        api.get('/Juan-Severiano')
             .then(
                 response => setUsuario(response.data)
             )

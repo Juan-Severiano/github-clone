@@ -8,7 +8,7 @@ export default function RepositoryList({ navigation }) {
     const [repo, setRepo] = useState({});
 
     useEffect(() => {
-        api.get('Juan-Severiano/repos')
+        api.get('/Juan-Severiano/repos')
             .then(
                 response => setRepo(response.data)
             )
