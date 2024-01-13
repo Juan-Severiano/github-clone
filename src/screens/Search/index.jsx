@@ -5,7 +5,7 @@ import api from './../../services/api';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function Search({ navigation, route }) {
-    const [search, setSearch] = useState('Juan-Severiano')
+    const [search, setSearch] = useState('')
     const [user, setUser] = useState({})
 
     async function getUser() {
