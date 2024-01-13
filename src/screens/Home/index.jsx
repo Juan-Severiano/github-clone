@@ -4,11 +4,11 @@ import Ionicons from '@expo/vector-icons/Ionicons'
 import styles from './styles';
 import api from '../../services/api';
 
-export default function Home({ navigation }) {
+export default function Home({ navigation, route }) {
     const [usuario, setUsuario] = useState({});
 
     useEffect(() => {
-        api.get('/Juan-Severiano')
+        api.get(`/${route.params.username}`)
             .then(
                 response => setUsuario(response.data)
             )
@@ -32,7 +32,7 @@ export default function Home({ navigation }) {
                         <Text style={styles.seguidoresNumero}>{usuario.following}</Text>
                         <Text style={styles.seguidoresTexto}>Seguindo</Text>
                     </View>
-                    <TouchableOpacity onPress={() => navigation.navigate('RepositoryList')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('RepositoryList', { username: usuario.login })}>
                         <View style={styles.seguidores}>
                             <Text style={styles.seguidoresNumero}>{usuario.public_repos}</Text>
                             <Text style={styles.seguidoresTexto}>Repositórios</Text>

@@ -4,13 +4,17 @@ import styles from './styles'
 import api from './../../services/api';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-export default function Search({ navigation }) {
+export default function Search({ navigation, route }) {
     const [search, setSearch] = useState('Juan-Severiano')
     const [user, setUser] = useState({})
 
     async function getUser() {
         api.get(`/${search}`)
             .then(response => setUser(response.data))
+    }
+
+    function nav() {
+        navigation.navigate('Home', { username: search })
     }
 
     return (
@@ -28,7 +32,7 @@ export default function Search({ navigation }) {
 
             {
                 user.name ?
-                    <View style={styles.userArea}>
+                    <TouchableOpacity style={styles.userArea} onPress={nav}>
                         <View style={styles.imageArea}>
                             <Image source={{ uri: user.avatar_url }} style={styles.imagem} />
                         </View>
@@ -47,7 +51,7 @@ export default function Search({ navigation }) {
                                 <Text style={styles.infoText}>{user.location}</Text>
                             </View>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                     : null
             }
         </View>

@@ -4,11 +4,11 @@ import styles from './styles';
 import api from '../../services/api';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-export default function RepositoryList({ navigation }) {
+export default function RepositoryList({ navigation, route }) {
     const [repo, setRepo] = useState({});
 
     useEffect(() => {
-        api.get('/Juan-Severiano/repos')
+        api.get(`/${route.params.username}/repos`)
             .then(
                 response => setRepo(response.data)
             )
