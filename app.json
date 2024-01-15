@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-github-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.juansev.githubclone"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a374f3d1-6b5f-4fbc-bb4c-64e4add3cf0d"
+      }
     }
   }
 }
